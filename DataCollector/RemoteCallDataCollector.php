@@ -54,7 +54,8 @@ class RemoteCallDataCollector extends DataCollector {
     public function collect(Request $request, Response $response, \Exception $exception = null)
     {
         $this->data['controller'] = $request->attributes->get('_controller');
-        $this->data['template'] = $request->attributes->get('_template');
+        $this->data['template'] = $request->attributes->get('_template', null);
+        $this->data['entities'] = [];
         $this->generateEntitiesUrls();
     }
 
@@ -133,8 +134,12 @@ class RemoteCallDataCollector extends DataCollector {
      */
     public function getTemplateUrl()
     {
-        $templateUrl = self::REMOTE_CALL_BUNDLE_PARENT_DIR.str_replace('\\', '/', str_replace('@', '', $this->getTemplate()->getPath()));
-        return self::REMOTE_CALL_URL.$templateUrl.':1';
+        if(!is_null($this->getTemplate())) {
+            $templateUrl = self::REMOTE_CALL_BUNDLE_PARENT_DIR.str_replace('\\', '/', str_replace('@', '', $this->getTemplate()->getPath()));
+            return self::REMOTE_CALL_URL.$templateUrl.':1';
+        }
+
+        return null;
     }
 
     /**
