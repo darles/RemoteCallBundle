@@ -1,0 +1,30 @@
+{
+    "name": "darles/remote-call-bundle",
+    "type": "symfony2-bundle",
+    "description": "Symfony2 RemoteCallBundle",
+    "keywords": [],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Darius Leskauskas",
+            "email": "dariusleskauskas@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "symfony/framework-bundle": "~2.3"
+    },
+    "require-dev": {
+        "twig/twig": "~1.5"
+    },
+    "autoload": {
+        "psr-0": { "Darles\\Bundle\\RemoteCallBundle\\": "" }
+    },
+    "target-dir": "Darles/Bundle/RemoteCallBundle",
+    "minimum-stability": "dev",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1-dev"
+        }
+    }
+}
