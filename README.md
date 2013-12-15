@@ -7,21 +7,21 @@ using RemoteCall Plugin (http://plugins.jetbrains.com/plugin/6027?pr=phpStorm) i
 Installation
 ------------
 
-1. Install RemoteCall plugin to your PHPStorm IDE
+- Install RemoteCall plugin to your PHPStorm IDE
 
 http://plugins.jetbrains.com/plugin/6027?pr=phpStorm
 
-2. Add DarlesRemoteCallBundle in your composer.json:
+- Add DarlesRemoteCallBundle in your composer.json:
 
 ```js
 {
     "require": {
-        "darles/remote-call-bundle": "~0.1@dev"
+        "darles/remote-call-bundle": "dev-master"
     }
 }
 ```
 
-3. Enable the bundle in the kernel:
+- Enable the bundle in the kernel:
 
 ``` php
 <?php
@@ -36,7 +36,7 @@ public function registerBundles()
 }
 ```
 
-4. Open your Symfony2 application in dev environment, you should see "Open in PHPStorm" tab in profiler toolbar.
+- Open your Symfony2 application in dev environment, you should see "Open in PHPStorm" tab in profiler toolbar.
 
 License
 -------
