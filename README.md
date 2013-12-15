@@ -11,11 +11,11 @@ Installation
 
 http://plugins.jetbrains.com/plugin/6027?pr=phpStorm
 
-- Add DarlesRemoteCallBundle in your composer.json:
+- Add DarlesRemoteCallBundle in your composer.json require-dev section:
 
 ```js
 {
-    "require": {
+    "require-dev": {
         "darles/remote-call-bundle": "dev-master"
     }
 }
