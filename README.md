@@ -7,7 +7,7 @@ using RemoteCall Plugin (http://plugins.jetbrains.com/plugin/6027?pr=phpStorm) i
 Demo
 ----
 
-* ![alt tag](https://www.dropbox.com/s/dfcvdmrbtvpyt51/remote_call_bundle_example.png)
+* https://www.dropbox.com/s/dfcvdmrbtvpyt51/remote_call_bundle_example.png
 * http://www.youtube.com/watch?v=fV5G2sVM0hw
 
 
