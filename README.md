@@ -38,7 +38,7 @@ public function registerBundles()
 {
     $bundles = array(
         // ...
-        new Darles\Bundle\RemoteCallBundle\RemoteCallBundle(),
+        new Darles\Bundle\RemoteCallBundle\DarlesRemoteCallBundle(),
     );
 }
 ```
