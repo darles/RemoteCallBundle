@@ -28,7 +28,7 @@ http://plugins.jetbrains.com/plugin/6027?pr=phpStorm
 }
 ```
 
-- Enable the bundle in the kernel:
+- Enable the bundle in the kernel on the DEV environment:
 
 ``` php
 <?php
@@ -36,10 +36,10 @@ http://plugins.jetbrains.com/plugin/6027?pr=phpStorm
 
 public function registerBundles()
 {
-    $bundles = array(
-        // ...
-        new Darles\Bundle\RemoteCallBundle\DarlesRemoteCallBundle(),
-    );
+    if (in_array($this->getEnvironment(), array('dev', 'test'))) {
+        //..
+        $bundles[] = new Darles\Bundle\RemoteCallBundle\DarlesRemoteCallBundle();
+    }
 }
 ```
 
