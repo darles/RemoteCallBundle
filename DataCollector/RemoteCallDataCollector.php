@@ -134,8 +134,14 @@ class RemoteCallDataCollector extends DataCollector {
      */
     public function getTemplateUrl()
     {
+
         if(!is_null($this->getTemplate())) {
-            $templateUrl = self::REMOTE_CALL_BUNDLE_PARENT_DIR.str_replace('\\', '/', str_replace('@', '', $this->getTemplate()->getPath()));
+            if(is_string($this->getTemplate())) {
+                $templateUrl = self::REMOTE_CALL_BUNDLE_PARENT_DIR.str_replace(':', '/', $this->getTemplate());
+            } else {
+                $templateUrl = self::REMOTE_CALL_BUNDLE_PARENT_DIR.str_replace('\\', '/', str_replace('@', '', $this->getTemplate()->getPath()));
+            }
+
             return self::REMOTE_CALL_URL.$templateUrl.':1';
         }
 
